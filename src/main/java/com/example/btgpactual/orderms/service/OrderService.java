@@ -58,7 +58,6 @@ public class OrderService {
 
         return new BigDecimal(response.getUniqueMappedResult().get("total").toString());
     }
-
     private BigDecimal getTotal(OrderCreatedEvent event) {
         return event.itens()
                 .stream()
